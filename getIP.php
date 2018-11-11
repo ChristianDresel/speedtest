@@ -93,7 +93,7 @@ if (isset($_GET["isp"])) {
             }
         }
     } catch (Exception $ex)*/ {
-        $isp = "Unknown ISP";
+        $isp = "...entfernt Datenschutz...";
     }
     echo json_encode(['processedString' => $ip . " - " . $isp, 'rawIspInfo' => $rawIspInfo]);
 } else {
