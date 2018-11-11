@@ -49,7 +49,7 @@ function distance($latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo) {
 if (isset($_GET["isp"])) {
     $isp = "";
 	$rawIspInfo=null;
-    try {
+    /*try {
         $json = file_get_contents("https://ipinfo.io/" . $ip . "/json");
         $details = json_decode($json, true);
 		$rawIspInfo=$details;
@@ -92,7 +92,7 @@ if (isset($_GET["isp"])) {
                 }
             }
         }
-    } catch (Exception $ex) {
+    } catch (Exception $ex)*/ {
         $isp = "Unknown ISP";
     }
     echo json_encode(['processedString' => $ip . " - " . $isp, 'rawIspInfo' => $rawIspInfo]);
