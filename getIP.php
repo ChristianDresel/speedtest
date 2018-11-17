@@ -93,9 +93,9 @@ if (isset($_GET["isp"])) {
             }
         }
     } catch (Exception $ex)*/ {
-        $isp = "...";
+        $isp = "";
     }
-    echo json_encode(['processedString' => $ip . " - " . $isp, 'rawIspInfo' => $rawIspInfo]);
+    echo json_encode(['processedString' => $ip . "" . $isp, 'rawIspInfo' => $rawIspInfo]);
 } else {
     echo json_encode(['processedString' => $ip, 'rawIspInfo' => ""]);
 }
